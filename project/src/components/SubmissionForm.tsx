@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Upload, Users, FileText, CheckSquare, Eye } from 'lucide-react';
 import { Button, Card, CardContent, Textarea, Input, Label } from "./ui";
-
+import  DecForm from './DecForm.tsx';
+import Review from './Review.tsx';
 interface Author {
   givenName: string;
   familyName: string;
@@ -59,6 +60,7 @@ export function SubmissionForm({ articleType }: SubmissionFormProps) {
     setAuthors(newAuthors);
     setLastSaved(new Date());
   };
+  
 
   return (
     <div className="max-w-6xl mx-auto py-8">
@@ -380,7 +382,8 @@ export function SubmissionForm({ articleType }: SubmissionFormProps) {
         {activeTab === 'declarations' && (
           <div>
             <h2 className="text-xl font-bold mb-6">Declarations</h2>
-            {/* Add declarations form */}
+           <DecForm/>
+           
           </div>
         )}
 
@@ -388,6 +391,7 @@ export function SubmissionForm({ articleType }: SubmissionFormProps) {
           <div>
             <h2 className="text-xl font-bold mb-6">Review Submission</h2>
             {/* Add submission review */}
+            <Review/>
           </div>
         )}
       </div>
