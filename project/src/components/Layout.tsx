@@ -122,8 +122,8 @@ export function Layout() {
 
       {/* <div className="bg-gradient-to-r from-orange-100 to-orange-200 border-b shadow-md"> */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-600 border-b shadow-md">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div className="relative">
+  {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> */}
+    {/* <div className="relative">
       <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 h-6 w-6" />
       <input
         type="text"
@@ -132,47 +132,24 @@ export function Layout() {
                    focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none 
                    transition-all duration-300 ease-in-out hover:shadow-md"
       />
-    </div>
-  </div>
+    </div> */}
+  {/* </div> */}
 </div>
 
 
       <Outlet />
 
         {/* Footer */}
-        <footer className="bg-gray-50 border-t mt-12">
+        {/* <footer className="bg-gray-50 border-t mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="font-semibold mb-4">About the Journal</h4>
-              <p className="text-sm text-gray-600">
-              The Research Hub is a premier journal focused on mobile communication, computation and information systems.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">For Authors</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/submit" className="hover:text-orange-600">Submission Guidelines</Link></li>
-                <li><Link to="/ethics" className="hover:text-orange-600">Publication Ethics</Link></li>
-                <li><Link to="/open-access" className="hover:text-orange-600">Open Access Options</Link></li>
-                <li><Link to="/charges" className="hover:text-orange-600">Article Processing Charges</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/contact" className="hover:text-orange-600">Editorial Office</Link></li>
-                <li><Link to="/support" className="hover:text-orange-600">Technical Support</Link></li>
-                <li><Link to="/advertising" className="hover:text-orange-600">Advertising</Link></li>
-                <li><Link to="/permissions" className="hover:text-orange-600">Rights & Permissions</Link></li>
-              </ul>
-            </div>
+            
           </div>
           <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-            © 2024 The Research Hub Journal. All rights reserved.
+            © 2024 
           </div>
         </div>
-      </footer>
+      </footer> */}
 
 
       <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
