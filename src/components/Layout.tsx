@@ -93,6 +93,7 @@ export function Layout() {
           <div className="md:hidden bg-white border-b shadow-md">
             <nav className="flex flex-col items-center py-4 space-y-4">
               <Link to="/articles" className="text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Articles</Link>
+              <Link to="/editorial" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Editorial Board</Link>
               <Link to="/about" className="text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>About</Link>
               <Link to="/submit" className="text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Submit</Link>
               <Link to="/author-guidelines" className="text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Author Guidelines</Link>
