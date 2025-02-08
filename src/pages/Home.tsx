@@ -78,7 +78,8 @@ export function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Search for research articles, academic books and more</h2>
@@ -154,21 +155,25 @@ export function Home() {
       </section>
 
       {/* Subjects Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Browse by subject</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {subjects.map((subject, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <div className="flex items-center space-x-4">
-                  <span className="text-2xl">{subject.icon}</span>
-                  <h3 className="text-lg font-medium">{subject.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="py-16 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-extrabold mb-12 text-center tracking-wide">
+      Browse by Subject
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {subjects.map((subject, index) => (
+        <div
+          key={index}
+          className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-200 text-gray-800 flex items-center space-x-4"
+        >
+          <span className="text-3xl text-indigo-600">{subject.icon}</span>
+          <h3 className="text-lg font-semibold">{subject.name}</h3>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section className="py-16 bg-gray-50">
