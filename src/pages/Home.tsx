@@ -63,20 +63,24 @@ export function Home() {
   ];
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="border-t container mx-auto px-4 py-4 flex items-center justify-center">
-          <div className="flex items-center space-x-8">
-           
-            <nav className="hidden md:flex space-x-6">
-              <Link to="/JournalFinder"  className="text-gray-600 hover:text-gray-900">Find a journal</Link>
-              <Link to="/JournalFinder" className="text-gray-600 hover:text-gray-900">Publish with us</Link>
-              <Link to="/JournalFinder" className="text-gray-600 hover:text-gray-900">Track research</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
-
+  {/* Header */}
+  <header className="bg-white shadow-sm">
+    <div className="border-t container mx-auto px-4 py-4 flex items-center justify-center">
+      <div className="flex items-center space-x-8">
+        <nav className="flex space-x-4 md:space-x-6">
+          <Link to="/JournalFinder" className="text-sm md:text-base text-gray-600 hover:text-gray-900">
+            Find a journal
+          </Link>
+          <Link to="/JournalFinder" className="text-sm md:text-base text-gray-600 hover:text-gray-900">
+            Publish with us
+          </Link>
+          <Link to="/JournalFinder" className="text-sm md:text-base text-gray-600 hover:text-gray-900">
+            Track research
+          </Link>
+        </nav>
+      </div>
+    </div>
+  </header>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
 
