@@ -35,7 +35,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-white">
     
-    <header className="bg-gradient-to-r from-orange-500 to-red-500 shadow-lg sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-blue-500 to-red-600 shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
           
