@@ -4,6 +4,7 @@ import { Search, BookOpen, LogOut, Menu, X } from 'lucide-react';
 import { AuthModal } from './AuthModal';
 import { supabase } from '../lib/supabase';
 import type { User } from '@supabase/supabase-js';
+import { Articles} from '../pages/Articles';
 
 export function Layout() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -49,6 +50,7 @@ export function Layout() {
             
             <nav className="hidden md:flex items-center space-x-6">
         <Link to="/articles" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Articles</Link>
+        <Link to="/editorial" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Editorial Board</Link>
         <Link to="/about" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">About</Link>
         <Link to="/submit" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Submit</Link>
         <Link to="/author-guidelines" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Author Guidelines</Link>

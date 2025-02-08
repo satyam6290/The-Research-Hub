@@ -8,7 +8,7 @@ import { About } from './pages/About';
 import { Submit } from './pages/Submit';
 import { AuthorGuidelines } from './pages/AuthorGuidelines';
 import './index.css';
-
+import {Editorial} from './pages/Editorial';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
@@ -19,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="about" element={<About />} />
           <Route path="submit" element={<Submit />} />
           <Route path="author-guidelines" element={<AuthorGuidelines />} />
+          <Route path="editorial" element={<Editorial />} />
         </Route>
       </Routes>
     </Router>
