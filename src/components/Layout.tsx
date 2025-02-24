@@ -4,7 +4,7 @@ import { Search, BookOpen, LogOut, Menu, X } from 'lucide-react';
 import { AuthModal } from './AuthModal';
 import { supabase } from '../lib/supabase';
 import type { User } from '@supabase/supabase-js';
-import { Articles} from '../pages/Articles';
+import { Articles } from '../pages/Articles';
 
 export function Layout() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -18,7 +18,7 @@ export function Layout() {
       setUser(session?.user ?? null);
     });
 
-  
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
     });
@@ -29,42 +29,42 @@ export function Layout() {
   const handleSignOut = async () => {
     await supabase.auth.signOut();
     navigate('/');
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-white">
-    
-    <header className="bg-gradient-to-r from-blue-500 to-red-600 shadow-lg sticky top-0 z-50">
+
+      <header className="bg-gradient-to-r from-blue-500 to-red-600 shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-          
+
             <Link to="/" className="flex items-center space-x-2">
               <BookOpen className="h-8 w-8 text-orange-600" />
               <div>
-              <h1 className="text-2xl font-bold text-white">The Research Hub</h1>
-              <p className="text-sm text-gray-200">Where Knowledge Meets Innovation</p>
+                <h1 className="text-2xl font-bold text-white">The Research Hub</h1>
+                <p className="text-sm text-gray-200">Where Knowledge Meets Innovation</p>
               </div>
             </Link>
 
-            
-            <nav className="hidden md:flex items-center space-x-6">
-        <Link to="/articles" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Articles</Link>
-        <Link to="/editorial" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Editorial Board</Link>
-        <Link to="/about" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">About</Link>
-        <Link to="/submit" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Submit</Link>
-        <Link to="/author-guidelines" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Author Guidelines</Link>
-      </nav>
 
-     
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link to="/articles" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Articles</Link>
+              <Link to="/editorial" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Editorial Board</Link>
+              <Link to="/about" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">About</Link>
+              <Link to="/submit" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Submit</Link>
+              <Link to="/author-guidelines" className="text-white font-semibold text-lg hover:text-gray-200 transition duration-300">Author Guidelines</Link>
+            </nav>
+
+
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-               className="md:hidden text-white focus:outline-none"
+              className="md:hidden text-white focus:outline-none"
             >
               {menuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
 
-   
+
             <div className="hidden md:flex items-center space-x-4">
               {user ? (
                 <div className="flex items-center space-x-4">
@@ -88,7 +88,7 @@ export function Layout() {
             </div>
           </div>
         </div>
- 
+
         {menuOpen && (
           <div className="md:hidden bg-white border-b shadow-md">
             <nav className="flex flex-col items-center py-4 space-y-4">
@@ -125,8 +125,8 @@ export function Layout() {
 
       {/* <div className="bg-gradient-to-r from-orange-100 to-orange-200 border-b shadow-md"> */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-600 border-b shadow-md">
-  {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> */}
-    {/* <div className="relative">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> */}
+        {/* <div className="relative">
       <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 h-6 w-6" />
       <input
         type="text"
@@ -136,14 +136,14 @@ export function Layout() {
                    transition-all duration-300 ease-in-out hover:shadow-md"
       />
     </div> */}
-  {/* </div> */}
-</div>
+        {/* </div> */}
+      </div>
 
 
       <Outlet />
 
-        {/* Footer */}
-        {/* <footer className="bg-gray-50 border-t mt-12">
+      {/* Footer */}
+      {/* <footer className="bg-gray-50 border-t mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
